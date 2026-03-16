@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Reaction Test</title>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#0f172a;
+color:white;
+}
+
+#box{
+width:200px;
+height:200px;
+background:red;
+margin:100px auto;
+display:none;
+cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚡ Reaction Time Test</h1>
+<p>Wait for the box to turn green, then click!</p>
+
+<div id="box"></div>
+
+<script>
+
+let startTime
+
+function showBox(){
+let box=document.getElementById("box")
+box.style.background="green"
+box.style.display="block"
+startTime=Date.now()
+}
+
+setTimeout(showBox,Math.random()*4000+2000)
+
+document.getElementById("box").onclick=function(){
+
+let reaction=Date.now()-startTime
+alert("Your reaction time: "+reaction+" ms")
+
+location.reload()
+
+}
+
+</script>
+
+</body>
+</html>
