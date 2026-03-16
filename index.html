@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Click Speed Test</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body{
+    font-family:Arial;
+    text-align:center;
+    background:#0f172a;
+    color:white;
+}
+
+#game{
+    margin-top:50px;
+}
+
+button{
+    padding:20px 40px;
+    font-size:20px;
+    background:#22c55e;
+    border:none;
+    border-radius:10px;
+}
+
+#ad{
+    margin-top:40px;
+    padding:20px;
+    background:#111;
+}
+</style>
+</head>
+
+<body>
+
+<h1>⚡ Click Speed Challenge</h1>
+<p>Click as fast as you can in 5 seconds!</p>
+
+<div id="game">
+<button onclick="clickFast()">CLICK!</button>
+<h2 id="score">0</h2>
+</div>
+
+<div id="ad">
+<script src="https://pl28926763.effectivegatecpm.com/ab/98/e5/ab98e597ac5d4c939b98fd544591a279.js"></script>
+</div>
+
+<script>
+let score=0
+let playing=false
+
+function clickFast(){
+
+if(!playing){
+playing=true
+score=0
+
+setTimeout(()=>{
+playing=false
+alert("Your score: "+score)
+},5000)
+
+}
+
+score++
+document.getElementById("score").innerText=score
+
+}
+</script>
+
+</body>
+</html>
